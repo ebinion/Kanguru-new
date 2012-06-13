@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Kanguru</title>
+		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/style.css">
+	</head>
+
+	<body>
+		<div class="wrapper">
+
+			<header>
+				<!-- LOGO -->
+				<div class="logo">
+				<h1>Kanguru</h1>
+				<p></p>
+				</div>
+				<!-- END LOGO -->
+			</header>
+
+			<!-- FORM BEGIN -->
+			<form action="http://google.com" method="GET">
+				<ul>
+					<!-- LOCATION -->
+					<li>
+						<label for="location">Location:</label>
+						<input type="text" name="location" id="location" placeholder="Chicago, IL, 60657"/>
+					</li>
+					<!-- LOCATION END -->
+
+					<!-- DESTINATION -->
+					<li>
+						<label for="destination">Destination:</label>
+						<input type="text" name="destination">
+					</li>
+					<!-- DESTINATION END -->
+				</ul>
+
+				<fieldset>
+					<!-- GO BUTTON -->
+					<button type="button" name="go-btn" onclick="window.location.href='file://localhost/Users/student/Desktop/Kanguru/results.html'" class="btn-go">Go!</button>
+					<!-- END GO BUTTON -->
+				</fieldset>
+			</form>
+			<!-- FORM END -->
+
+		</div>	
+	</body>
+</html>
