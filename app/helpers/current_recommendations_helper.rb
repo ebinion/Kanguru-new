@@ -8,7 +8,10 @@ module CurrentRecommendationsHelper
       return "sunny"
     elsif current_weather.condition.downcase.match('snow')
       return "snow"
+    # else
+      # return "sunny"
     end
     
   end
+  
 end
