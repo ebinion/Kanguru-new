@@ -13,4 +13,3 @@ module CurrentRecommendationsHelper
     end
   end
 end
-I
