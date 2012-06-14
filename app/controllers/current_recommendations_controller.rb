@@ -6,4 +6,8 @@ class CurrentRecommendationsController < ApplicationController
       @weather = CurrentWeather.create
     end
   end
+  
+  def destination
+    
+  end
 end
