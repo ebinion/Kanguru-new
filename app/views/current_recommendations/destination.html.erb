@@ -1,3 +1,9 @@
-<%= form_tag(recommendation_url) do |f| %>
-
+<%= form_tag(recommendation_url, :method => :get) do |f| %>
+  <p><%= label_tag "Current Location", "current_location" %><br />
+  <%= text_field_tag "current_location", "Chicago, IL" %></p>
+  
+  <p><%= label_tag "Destination", "destination" %><br />
+  <%= text_field_tag "destination" %></p>
+  
+  <%= submit_tag "help me" %>
 <% end %>
