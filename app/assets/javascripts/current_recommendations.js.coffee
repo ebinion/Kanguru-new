@@ -6,5 +6,7 @@ $ ->
     $(this).trigger("blur")
     alert "Let's stick with Chicago for now. \n(Other cities coming soon.)"
     
-  # $(".confirm_exit").click ->
-  #   if confirm("You are leaving are app. Click cancel to s")
+  $(".confirm_exit").click (e) ->
+    if !confirm("You are leaving are app. Click cancel to stay here.")
+      e.preventDefault()
+    
