@@ -13,9 +13,9 @@
   <%= text_field_tag "current_location", "Chicago, IL" %></p>
   
   <p><%= label_tag "Destination", "destination" %><br />
-  <%= text_field_tag "destination" %></p>
-  
-  <%= button_tag "go!", :type => "submit", :class => "btn-go" %>
+  <input type="text" name="destination" required>
+
+<%= button_tag "go!", :type => "submit", :class => "btn-go" %>
 <% end %>
 
 </div>
