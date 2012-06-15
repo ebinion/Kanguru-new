@@ -9,6 +9,7 @@ class CurrentRecommendationsController < ApplicationController
     if params[:destination]
       @destination = params[:destination]
     end
+    
   end
   
   def destination
