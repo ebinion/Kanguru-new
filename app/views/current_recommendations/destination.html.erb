@@ -1,9 +1,21 @@
+<div class="wrapper">
+
+<header>
+	<!-- LOGO -->
+	<div class="logo">
+	<img src="/assets/kangurulogo01.png" alt="Kanguru App">
+	</div>
+	<!-- END LOGO -->
+</header>
+
 <%= form_tag(recommendation_url) do |f| %>
   <p><%= label_tag "Current Location", "current_location" %><br />
   <%= text_field_tag "current_location", "Chicago, IL" %></p>
   
   <p><%= label_tag "Destination", "destination" %><br />
-  <%= text_field_tag "destination" %></p>
-  
-  <%= submit_tag "help me" %>
+  <input type="text" name="destination" required>
+
+<%= button_tag "go!", :type => "submit", :class => "btn-go" %>
 <% end %>
+
+</div>
