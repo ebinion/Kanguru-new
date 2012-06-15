@@ -8,8 +8,8 @@
 			<nav>
 				<ol>
 					<li class="route"><a href="#">Route Pin</a></li>
-					<li class="destination"><a href="https://maps.google.com/maps?saddr=<%= CGI.escape(@destination) %>&daddr=United+States+(Merchandise+Mart)&hl=en&sll=41.889819,-87.634914&sspn=0.004624,0.009645&geocode=FWlMgAId4VfG-imJ3MoOMdIPiDFl0ctY20sVJw%3BFcksfwId_M_G-iGCzSDisZbKhylLiPzItiwOiDGCzSDisZbKhw&mra=ls&t=m&z=13"><%= @destination %></a></li>
-					<li class="home"><a href="file://localhost/Users/student/Desktop/Kanguru/home.html" selected>Home</a></li>
+					<li class="destination"><a href="https://maps.google.com/maps?daddr=<%= CGI.escape(@destination) %>&saddr=222+Merchandise+Mart+Plaza,+Chicago,+IL&hl=en&sll=41.889819,-87.631888&sspn=0.018498,0.038581&geocode=FWlMgAId4VfG-imJ3MoOMdIPiDFl0ctY20sVJw%3BFXEqfwIdXMrG-ilx0yL7tiwOiDF1y_qieOluxQ&oq=222+West+Merchandise+Mart+Plaza&mra=ls&t=m&z=12" class="confirm_exit"><%= @destination %></a></li>
+					<li class="home"><a href="<%= root_path %>" selected>Home</a></li>
 				</ol>
 			</nav>
 		</header>
