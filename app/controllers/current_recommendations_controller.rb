@@ -5,6 +5,10 @@ class CurrentRecommendationsController < ApplicationController
     else
       @weather = CurrentWeather.create
     end
+    
+    if params[:destination]
+      @destination = params[:destination]
+    end
   end
   
   def destination
