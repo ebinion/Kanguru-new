@@ -23,13 +23,13 @@ header {
 div.logo {
 	overflow: hidden;
 	width: 280px;
-	height: 250px;
+	height: 100px;
 	padding: 20px;
 	margin: 0 auto;	
 }
 
 	div.logo h1 {
-		height: 300px;
+		height: 100px;
 		width: 300px;
 		background: red;
 		background: url(kangurulogo01.png) 0 0 no-repeat;
@@ -48,7 +48,7 @@ form {
 }
 
 form ul {
-	height: 100px;
+	height: 200px;
 }
 
 form li {
@@ -64,6 +64,7 @@ form label {
 
 form input {
 	width: 248px;
+	height: 40px;
 	float: left;
 }
 
