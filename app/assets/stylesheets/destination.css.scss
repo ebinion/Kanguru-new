@@ -1,0 +1,124 @@
+body.destination{
+  background: rgb(241,90,36);
+  
+  .wrapper{
+    padding: 20px;
+    height: auto;
+    width: 280px;
+  }
+  
+  header{
+    background: transparent;
+    height: auto;
+    text-align: center;
+    
+    &:after{
+      clear: both;
+      content: '';
+      display: table;
+    }
+    
+    img{
+      width: 83%;
+      max-width: 355px;
+    }
+  }
+  
+  form{
+    display: block;
+    
+    p{
+      float: none;
+      clear: both;
+      height: auto;
+      margin: 20px 0;
+    }
+    
+    button{
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 25px;
+      font-weight: normal;
+      margin: 10px 0 0 0;
+      width: 48%;
+      
+      &#clear{
+        background: rgba(255,255,255,.5);
+        float:right;
+        
+        &:after{
+          clear: both;
+          content: '';
+          display: table;
+        }
+      }
+    }
+
+    input[type="text"]{
+      background: #fff none;
+      display: block;
+      -moz-box-shadow: 0;
+      -webkit-box-shadow: 0;
+      box-shadow: 0;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border: none;
+      font-size: 16px;
+      height: 50px;
+      line-height: 50px;
+      padding: 10px;
+      width: 100%;
+      vertical-align: middle;
+
+      &:focus{
+        box-shadow: 1px 1px 3px rgba(0,0,0,.4) inset;
+        outline: none;
+      }
+
+      &#current_location{
+        background: #fff url(/assets/target.png) no-repeat 96% 13px;
+      }
+    
+    }
+    
+    label{
+      color: #fff;
+      display: block;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px){
+  body.destination{
+    .wrapper{
+      width: 440px;
+    }
+  }
+}
+
+//@media screen and (min-width: 560px){
+//  body.destination{
+//    .wrapper{
+//      width: 600px;
+//    }
+//    
+//    form p{
+//      clear: none;
+//      float: left;
+//      margin-left: 2%;
+//      margin-right: 2%;
+//      width: 46%;
+//      
+//      &.submission{
+//        float: right;
+//        text-align: center;
+//        margin: 0;
+//        width: 46%;
+//      }
+//    }
+//  }
+//}

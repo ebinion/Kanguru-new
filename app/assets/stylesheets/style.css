@@ -13,26 +13,26 @@ body {
 	overflow: hidden;
 }
 
-
+/*
 header {
 	width: 320px;
 	margin: 0 auto;
 	top: 0px;
 }
-	header img {
-		height: 139px;
-		width: 255px;
-	}
+header img {
+	height: 139px;
+	width: 255px;
+}*/
 
-div.logo {
+/*div.logo {
 	overflow: hidden;
 	width: 320px;
 	height: 150px;
 	padding: 20px;
 	margin: 0 auto;
 	background: rgb(241,90,36);
-}
-
+}*/
+/*
 	div.logo h1 {
 		height: 150px;
 		width: 300px;
@@ -40,16 +40,16 @@ div.logo {
 		background: url(kangurulogo01.png) 0 0 no-repeat;
 		background-width: 320px;
 		text-indent: -9999px;
-	}
+	}*/
 
-form {
+/*form {
 	overflow: hidden;
 	background: ;
   	padding: 10px;
   	width: 320px;
   	margin: 0 auto;
   	background: rgb(241,90,36);
-}
+}*/
 
 form ul {
 	height: 200px;
@@ -59,12 +59,12 @@ form li {
 	overflow: hidden;
 }
 
-form label {
+/*form label {
 	width: 100px;
 	float: left;
 	padding: 1px;
 	margin: 2px 0;
-}
+}*/
 
 form input {
 	width: 248px;
@@ -78,10 +78,10 @@ form fieldset {
 	margin: 0px 0 -10px -10px;
 	padding: 10px 0;
 	background: -webkit-linear-gradient(top, #ebeced, #dedfe0);
-  	border: none;
-  	border-top: 1px solid #d0d2d5;
-  	border-radius: 0 0 4px 4px;
-  	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+ 	border: none;
+ 	border-top: 1px solid #d0d2d5;
+ 	border-radius: 0 0 4px 4px;
+ 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 form button {
@@ -124,7 +124,11 @@ div.background {
 }
 
 header {
-
+	background-color: #fff;
+	background: rgba(255,255,255,.8);
+	height: 40px;
+	overflow: visible;
+	position: relative;
 }
 
 /* NAV BAR */
@@ -132,10 +136,15 @@ header {
 nav {
 /*	position: fixed;*/
 	text-align: center;
-	background-color: #f29120;
-	background-image: rgba(255,255,255,.5);
+	overflow: visible;
+	
+}
+nav:after {
+	clear: both;
+	content: '';
+	display: table;
+	height: 0;
 	overflow: hidden;
-	position: relative;
 }
 
 nav ul li {
@@ -165,21 +174,23 @@ nav li {
 }
 
 nav ol li.home {
-	width: 44px;
-	height: 44px;
+/*	width: 59px;
+	height: 49px;*/
 	text-indent: -9999px;
 	float: right;
 	margin-right: 20px;
 }
 
 nav ol li.home a {
-	background: url(/assets/flag.png) -5px 0 no-repeat;
-	width: 44px;
-	height: 44px;
+	background: url(/assets/flag.png) 0 0 no-repeat;
+	width: 54px;
+	height: 48px;
 	text-indent: -9999px;
 	display: block;
 	overflow: visible;
 	position: absolute;
+	right: 30px;
+	top: 0;
 }
 
 /*nav li a {
@@ -233,14 +244,14 @@ nav ol li.time {
 /* DAY DESCRIPTION */
 
 div.day_desc {
-	padding-top: 5px;
+	margin-top: 40px;
 }
 
 p.desc_info {
 	height: 22px;
 	width: 280px;
 	margin: 0px auto;
-	background: rgba(54,137,158,0.8);
+	background: rgba(54,137,158,0.6);
 	border-radius:12px;
 	color: #fffdf9;
 	line-height: 16px;
@@ -264,6 +275,7 @@ p.desc_info {
 div.weather {
 	width: 140px;
 	float: left;
+	font-size:20px;
 	text-align: center;
 }
 
@@ -283,6 +295,7 @@ div.weather {
 	div.weather p.percipitation {
 		color: rgb(44,138,161);
 		background: rgba(255,255,255,0.8);
+		font
 	}
 
 	div.weather p.wind {

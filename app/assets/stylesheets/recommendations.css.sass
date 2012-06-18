@@ -1,0 +1,81 @@
+.container
+  background-color: #aff
+  overflow: hidden
+  width: 320px
+  
+#recommendations
+  position: relative
+  -webkit-transition: left .5s ease-in
+  -moz-transition: left .5s ease-in
+  transition: left .5s ease-in
+  width: 960px
+  
+  &.car 
+    left: 0
+  
+  &.train
+    left: -320px
+    
+  &.bike
+    left: -640px
+
+  section.recommendation
+    color: #998F84
+    float: left
+    text-align: center
+    width: 320px
+  
+    h3
+      color: inherit
+      font-size: 10px
+      text-transform: uppercase
+    
+    .transportation
+      height: 100px
+      padding: 10px 0
+      text-align: center
+      margin: 0 auto -120px auto
+      position: relative
+      width: 210px
+      z-index: 999
+    
+      h3
+        margin: 0 0 5px 0
+        
+      img
+        max-width: 98px
+      
+    .transport_bg
+      margin: 0 0 -2px 0
+      position: relative
+      width: 210px
+      z-index: 99
+    
+    .items
+      background: transparent url(/assets/transparent-white.png)
+      padding: 20px 0
+      
+      img
+        max-width: 100%
+    
+      h3
+        background: url(/assets/bring-that-line.gif) no-repeat center center
+        margin: 0 20px
+      
+      ul
+        list-style: none
+        width: 100%
+      
+        &:after
+          clear: both
+          content: ''
+          display: table
+      
+        li
+          margin: 10px 20px
+          float: left
+          width: 65px
+        
+          .caption
+            font-size: 11px
+            text-transform: lowercase

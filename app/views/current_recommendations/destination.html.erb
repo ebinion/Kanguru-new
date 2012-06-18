@@ -1,21 +1,26 @@
+<% content_for :body_attributes, "class=destination" %>
+
 <div class="wrapper">
 
-<header>
-	<!-- LOGO -->
-	<div class="logo">
-	<img src="/assets/kangurulogo01.png" alt="Kanguru App">
-	</div>
-	<!-- END LOGO -->
-</header>
+  <header>
+  	<!-- LOGO -->
+  	<div class="logo">
+    	<img src="/assets/kangurulogo01.png" alt="Kanguru App">
+  	</div>
+  	<!-- END LOGO -->
+  </header>
 
-<%= form_tag(recommendation_url) do |f| %>
-  <p><%= label_tag "Current Location", "current_location" %><br />
-  <%= text_field_tag "current_location", "Chicago, IL" %></p>
+  <%= form_tag(recommendation_url) do |f| %>
+    <p><%= label_tag "current_location", "starting location" %>
+    <%= text_field_tag "current_location", "Chicago, IL" %></p>
   
-  <p><%= label_tag "Destination", "destination" %><br />
-  <input type="text" name="destination" required>
-
-<%= button_tag "go!", :type => "submit", :class => "btn-go" %>
-<% end %>
+    <p><%= label_tag "Destination", "destination" %>
+    <input type="text" name="destination" required></p>
+    
+    <p class="submission">
+      <%= button_tag "go!", :type => "submit", :class => "btn-go" %>
+      <button id="clear">clear</button>
+    </p>
+  <% end %>
 
 </div>
