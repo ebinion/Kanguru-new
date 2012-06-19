@@ -1,46 +1,55 @@
 <div class="wrapper">
 
 	<!-- BACKGROUND WRAPPER -->
-	<div class="background <%= condition_class @weather %>"> 
+	<div class="background <%# condition_class @weather %>"> 
 
 			<!-- HEADER/NAV BAR -->
 		<header>
-			<nav>
-				<ol>
-					<li class="route"><a href="https://maps.google.com/maps?daddr=<%= CGI.escape(@destination) %>&saddr=222+Merchandise+Mart+Plaza,+Chicago,+IL&hl=en&sll=41.889819,-87.631888&sspn=0.018498,0.038581&geocode=FWlMgAId4VfG-imJ3MoOMdIPiDFl0ctY20sVJw%3BFXEqfwIdXMrG-ilx0yL7tiwOiDF1y_qieOluxQ&oq=222+West+Merchandise+Mart+Plaza&mra=ls&t=m&z=12">Route Pin</a></li>
-					<li class="destination"><a href="https://maps.google.com/maps?daddr=<%= CGI.escape(@destination) %>&saddr=222+Merchandise+Mart+Plaza,+Chicago,+IL&hl=en&sll=41.889819,-87.631888&sspn=0.018498,0.038581&geocode=FWlMgAId4VfG-imJ3MoOMdIPiDFl0ctY20sVJw%3BFXEqfwIdXMrG-ilx0yL7tiwOiDF1y_qieOluxQ&oq=222+West+Merchandise+Mart+Plaza&mra=ls&t=m&z=12" class="confirm_exit"><%= @destination %></a></li>
-					<li class="home"><a href="<%= root_path %>" selected>Home</a></li>
-				</ol>
-			</nav>
+		  <div class="container">
+  			<nav>
+  				<ol>
+  					<li class="route"><a href="https://maps.google.com/maps?daddr=<%= CGI.escape(@destination) %>&saddr=222+Merchandise+Mart+Plaza,+Chicago,+IL&hl=en&sll=41.889819,-87.631888&sspn=0.018498,0.038581&geocode=FWlMgAId4VfG-imJ3MoOMdIPiDFl0ctY20sVJw%3BFXEqfwIdXMrG-ilx0yL7tiwOiDF1y_qieOluxQ&oq=222+West+Merchandise+Mart+Plaza&mra=ls&t=m&z=12">Route Pin</a></li>
+  					<li class="destination"><a href="https://maps.google.com/maps?daddr=<%= CGI.escape(@destination) %>&saddr=222+Merchandise+Mart+Plaza,+Chicago,+IL&hl=en&sll=41.889819,-87.631888&sspn=0.018498,0.038581&geocode=FWlMgAId4VfG-imJ3MoOMdIPiDFl0ctY20sVJw%3BFXEqfwIdXMrG-ilx0yL7tiwOiDF1y_qieOluxQ&oq=222+West+Merchandise+Mart+Plaza&mra=ls&t=m&z=12" class="confirm_exit">
+  					<% if @destination.blank? %>
+  					  Map your route
+  					<% else %>
+  					  <%= @destination %>
+  					<% end %></a>
+  					</li>
+  					<li class="home"><a href="<%= root_path %>" selected>Home</a></li>
+  				</ol>
+  			</nav>
+			</div>
 		</header>
+    
+    <div class="container">
+  		<!-- DAY DESCRIPTION -->
+  		<div class="day_desc">
+  			<p class="desc_info"><%= @weather.condition %></p>
+  		</div>
+  		<!-- DAY DESCRIPTION END -->
 
-		<!-- DAY DESCRIPTION -->
-		<div class="day_desc">
-			<p class="desc_info"><%= @weather.condition %></p>
+  		<!-- WEATHER INFO -->
+  		<article class="weather-container">
+  			<div class="weather">
+  				<p class="temperature">
+  					<%= @weather.temperature %>&deg;
+  				</p>
+  			</div>
+  			<div class="weather">
+  				<p class="percipitation">
+  					<%= @weather.humidity %> humidity
+  				</p>
+  				<p class="wind">
+  					<%= @weather.wind_direction %> <%= @weather.wind_speed %>mph
+  				</p>
+  			</div>
+  		</article>
+  		<!-- WEATHER INFO END -->
 		</div>
-		<!-- DAY DESCRIPTION END -->
-
-		<!-- WEATHER INFO -->
-		<article class="weather-container">
-			<div class="weather">
-				<p class="temperature">
-					<%= @weather.temperature %>&deg;
-				</p>
-			</div>
-			<div class="weather">
-				<p class="percipitation">
-					<%= @weather.humidity %>
-				</p>
-				<p class="wind">
-					<%= @weather.wind_direction %> <%= @weather.wind_speed %>mph
-				</p>
-			</div>
-		</article>
-		<!-- WEATHER INFO END -->
 		
-		
-		<div class="container">
-			<div id="recommendations" class="car">
+		<!-- Recommendations -->
+		<div id="recommendations" class="car">
 				<section class="recommendation car">
 					<div class="transportation">
 						<h3>Best Option</h3>
@@ -152,10 +161,15 @@
 					</div>
 				</section>
 			</div>
-		</div>
-		
+		<!-- Recommendations END -->
 		
 		
 	</div>
 	<!-- BACKGROUND WRAPPER END -->
 </div>
+
+<script>
+  $(document).ready(function(){
+    $.backstretch("<%= condition_img @weather %>");
+  });
+</script>

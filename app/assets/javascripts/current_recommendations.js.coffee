@@ -9,4 +9,6 @@ $ ->
   $(".confirm_exit").click (e) ->
     if !confirm("You are leaving are app. Click cancel to stay here.")
       e.preventDefault()
-    
+  $("#skip").click (e) ->
+    e.preventDefault()
+    window.location = "/recommendation"

@@ -6,9 +6,11 @@ body {
 }
 
 .wrapper {
-	width: 320px;
-	height: 445px;
-	position: relative;
+/*	width: 320px;*/
+	width: auto;
+/*	height: 445px;*/
+	height: auto;
+/*	position: relative;*/
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -120,7 +122,7 @@ form button:active {
 ========================================================= */
 
 div.background {
-	background: #047f8c;
+/*	background: #047f8c;*/
 }
 
 header {
@@ -135,6 +137,7 @@ header {
 
 nav {
 /*	position: fixed;*/
+	height: 54px;
 	text-align: center;
 	overflow: visible;
 	
@@ -289,7 +292,9 @@ div.weather {
 		font-weight:bold;
 		line-height: 61px;
 		font-size: 75px;
-		text-shadow:1px 1px 1px rgba(0,0,0,.4)
+		-webkit-text-shadow:1px 1px 10px rgba(0,0,0,.3);
+		-moz-text-shadow:1px 1px 10px rgba(0,0,0,.3);
+		text-shadow:1px 1px 10px rgba(0,0,0,.3);
 	}
 
 	div.weather p.percipitation {
@@ -381,22 +386,26 @@ footer {
 /* END FOOTER */
 
 .background.rain {
-	background: url(/assets/rainy.png);
-	height:314;
-	width: 320;
+	background: url(/assets/backgrounds/rainy-bg.jpg);
+/*	height:314;
+	width: 320;*/
 }
 
 .background.sunny {
-	background: url(/assets/clearskies.jpg);
-	height:314;
-	width: 320;
+	background: url(/assets/backgrounds/sunny-bg.jpg);
+/*	height:314;
+	width: 320;*/
 }
 
 .background.snow {
-	background: url(/assets/snow.jpg);
-	height:314;
-	width: 320;
+	background: url(/assets/backgrounds/snowing-bg.jpg);
+/*	height:314;
+	width: 320;*/
 }
+.background.overcast {
+	background: url(/assets/backgrounds/overcast-bg.jpg);
+}
+
 
 @font-face {
   font-family: 'BreeSerif Regular';

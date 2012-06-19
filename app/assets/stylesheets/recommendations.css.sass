@@ -1,14 +1,30 @@
+article.weather-container
+  height: auto
+
+  &:after
+    clear: both
+    content: ''
+    display: table
+
 .container
-  background-color: #aff
+  margin: 0 auto
   overflow: hidden
+  position: relative
   width: 320px
   
 #recommendations
-  position: relative
+  
   -webkit-transition: left .5s ease-in
   -moz-transition: left .5s ease-in
   transition: left .5s ease-in
-  width: 960px
+  padding: 40px 0 0
+  width: 300%
+  
+  &:after
+    clear: both
+    content: ''
+    display: table
+    
   
   &.car 
     left: 0
@@ -22,8 +38,9 @@
   section.recommendation
     color: #998F84
     float: left
+    position: relative
     text-align: center
-    width: 320px
+    width: 33.3%
   
     h3
       color: inherit
@@ -46,7 +63,7 @@
         max-width: 98px
       
     .transport_bg
-      margin: 0 0 -2px 0
+      margin: 0 0 -1px 0
       position: relative
       width: 210px
       z-index: 99
@@ -60,11 +77,13 @@
     
       h3
         background: url(/assets/bring-that-line.gif) no-repeat center center
-        margin: 0 20px
+        margin: 0 auto
+        width: 280px
       
       ul
         list-style: none
-        width: 100%
+        margin: 0 auto
+        width: 320px
       
         &:after
           clear: both
