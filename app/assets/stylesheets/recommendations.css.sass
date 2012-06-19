@@ -13,11 +13,13 @@ article.weather-container
   width: 320px
   
 #recommendations
-  
+  line-height: 1
   -webkit-transition: left .5s ease-in
   -moz-transition: left .5s ease-in
   transition: left .5s ease-in
+  overflow: hidden
   padding: 40px 0 0
+  position: relative
   width: 300%
   
   &:after
@@ -28,12 +30,30 @@ article.weather-container
   
   &.car 
     left: 0
+    
+    .best
+      display: none
+    
+    .car .best
+      display: inline
   
   &.train
-    left: -320px
+    left: -100%
+    
+    .best
+      display: none
+    
+    .train .best
+      display: inline
     
   &.bike
-    left: -640px
+    left: -199.9%
+    
+    .best
+      display: none
+    
+    .bike .best
+      display: inline
 
   section.recommendation
     color: #998F84
@@ -41,6 +61,9 @@ article.weather-container
     position: relative
     text-align: center
     width: 33.3%
+    
+    &.bike
+      width: 33.4%
   
     h3
       color: inherit
@@ -98,3 +121,30 @@ article.weather-container
           .caption
             font-size: 11px
             text-transform: lowercase
+            
+@media screen and (min-width: 480px)
+  body.weather_recommendation 
+    
+    .container
+      width: 440px
+      
+    p.desc_info
+      width: 400px
+    
+    article.weather-container
+      margin: 0 20px
+      padding: 20px
+      width: 360px
+      
+      .weather
+        width: 180px
+  
+  #recommendations section.recommendation .items 
+    h3
+      width: 400px
+    
+    ul
+      width: 440px
+    
+      li
+        margin: 15px 40px

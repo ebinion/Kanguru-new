@@ -1,3 +1,5 @@
+<% content_for :body_attributes, "class=weather_recommendation" %>
+
 <div class="wrapper">
 
 	<!-- BACKGROUND WRAPPER -->
@@ -49,10 +51,12 @@
 		</div>
 		
 		<!-- Recommendations -->
-		<div id="recommendations" class="car">
+		<div id="recommendations" class="<%= recommended_transportation @weather %>">
 				<section class="recommendation car">
+				  
 					<div class="transportation">
-						<h3>Best Option</h3>
+					  <div class="btn-right"></div>
+						<h3><span class="best">Best</span> Option</h3>
 						<img src="/assets/mode_car.png" alt="car" />
 					</div>
 					<img src="/assets/rounded-top.png" class="transport_bg">
@@ -88,8 +92,11 @@
 				</section>
 
 				<section class="recommendation train">
+				  
 					<div class="transportation">
-						<h3>Best Option</h3>
+					  <div class="btn-left"></div>
+  				  <div class="btn-right"></div>
+						<h3><span class="best">Best</span> Option</h3>
 						<img src="/assets/train/mode_train.png" alt="train" />
 					</div>
 					<img src="/assets/rounded-top.png" class="transport_bg">
@@ -125,8 +132,10 @@
 				</section>
 
 				<section class="recommendation bike">
+				  
 					<div class="transportation">
-						<h3>Best Option</h3>
+					  <div class="btn-left"></div>
+						<h3><span class="best">Best</span> Option</h3>
 						<img src="/assets/bike/mode_bike.png" alt="car" />
 					</div>
 					<img src="/assets/rounded-top.png" class="transport_bg">

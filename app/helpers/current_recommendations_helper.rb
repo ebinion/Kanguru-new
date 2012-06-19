@@ -16,6 +16,20 @@ module CurrentRecommendationsHelper
     
   end
   
+  def recommended_transportation(current_weather)
+    
+    @my_conditon = condition_class(current_weather)
+    
+    if @my_conditon == "rain"
+      return "car"
+    elsif @my_conditon == "sunny" || @my_conditon == "overcast"
+      return "bike"
+    else
+      return "train"
+    end
+    
+  end
+  
   def condition_img(current_weather)
     
     if current_weather.condition.downcase.match('rain') || current_weather.condition.downcase.match('drizzle')  || current_weather.condition.downcase.match('mist') 

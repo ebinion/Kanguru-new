@@ -347,6 +347,18 @@ div.weather {
 	text-indent: -9999px;
 	cursor: pointer;
 }
+
+.btn-left, .btn-right{
+	float: none;
+	position: absolute;
+	left: 0;
+	top: 48px;
+	margin: 0;
+}
+.btn-right{
+	left: auto;
+	right: 0;
+}
 /* END FORM OF TRANS */
 
 /* FOOTER */

@@ -12,3 +12,17 @@ $ ->
   $("#skip").click (e) ->
     e.preventDefault()
     window.location = "/recommendation"
+  
+  rec = $("#recommendations")
+  
+  $(".recommendation.train .btn-left").click (e) ->
+    $(rec).css("left", 0)
+    
+  $(".recommendation.bike .btn-left").click (e) ->
+    $(rec).css("left", "-100%")
+    
+  $(".recommendation.train .btn-right").click (e) ->
+    $(rec).css("left", "-200%")
+
+  $(".recommendation.car .btn-right").click (e) ->
+    $(rec).css("left", "-100%")
