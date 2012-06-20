@@ -40,6 +40,8 @@ module CurrentRecommendationsHelper
       return "/assets/backgrounds/snowing-bg.jpg"
     elsif current_weather.condition.downcase.match('overcast')
       return "/assets/backgrounds/overcast-bg.jpg"
+    elsif current_weather.condition.downcase.match('clear')
+      return "/assets/backgrounds/clear-night-bg.jpg"
     # else
       # return "sunny"
     end
