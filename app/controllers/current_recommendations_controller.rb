@@ -15,6 +15,23 @@ class CurrentRecommendationsController < ApplicationController
   end
   
   def destination
+    latitude = cookies[:lat]
+    longitude = cookies[:lon]
+
+    def split(a)
+        b = "%.3f" % a
+        return b
+    end
+
+    @lat_string = split(latitude.to_f).to_s
+    @lon_string = split(longitude.to_f).to_s
+
+    @lat = @lat_string
+    @lon = @lon_string
+
+    # @lat = cookies[:lat].to_f
+    # @lon = cookies[:lon].to_f
+    @acc = cookies[:acc]
     
   end
 end
