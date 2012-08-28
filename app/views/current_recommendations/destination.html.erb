@@ -12,7 +12,7 @@
 
   <%= form_tag(recommendation_url) do |f| %>
     <p><%= label_tag "current_location", "starting location" %>
-    <%= text_field_tag "current_location", "Chicago, IL" %><button id="geo_location" onclick="getLocationUpdate();" ></button></p>
+    <%= text_field_tag "current_location", "Current Location" %><button id="geo_location" onclick="getGeoLocation();" ></button></p>
   
     <p><%= label_tag "Destination", "destination" %>
     <input type="text" name="destination" required></p>
